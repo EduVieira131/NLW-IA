@@ -1,27 +1,26 @@
-# React + TypeScript + Vite
+## upload.ai
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Description:
 
-Currently, two official plugins are available:
+The upload.ai project consists of a tool that uses artificial intelligence to create descriptions and titles, among other features, for videos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project uses ChatGPT to create the description and titles of the video, which is sent manually by the user.
 
-## Expanding the ESLint configuration
+### Tech stack:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React JS](https://react.dev)
+- [Tailwindcss](https://tailwindcss.com)
+- [Node.js](https://nodejs.org/en)
+- [ChatGPT](https://openai.com/chatgpt)
+- [Git/GitHub](https://git-scm.com)
 
-- Configure the top-level `parserOptions` property like this:
+### Usage:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+You can clone this project and install the dependencies with the following command:
+
+```sh
+git https://github.com/EduVieira131/NLW-IA.git
+cd FoodExplorer-API
+npm install
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
