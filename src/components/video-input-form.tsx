@@ -1,4 +1,4 @@
-import { AwardIcon, FileVideo, UploadIcon } from 'lucide-react'
+import { FileVideo, UploadIcon } from 'lucide-react'
 import { Separator } from './ui/separator'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
@@ -17,7 +17,11 @@ const statusMessages = {
   success: 'Sucesso!'
 }
 
-export function VideoInputForm() {
+interface VideoInputFormProps {
+  onVideoUploaded: (id: string) => void
+}
+
+export function VideoInputForm(props: VideoInputFormProps) {
   const [videoFile, setVideoFile] = useState<File | null>(null)
   const [status, setStatus] = useState<Status>('waiting')
 
@@ -104,6 +108,8 @@ export function VideoInputForm() {
     })
 
     setStatus('success')
+
+    props.onVideoUploaded(videoId)
   }
 
   const previewURL = useMemo(() => {

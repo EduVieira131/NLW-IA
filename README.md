@@ -20,7 +20,7 @@ You can clone this project and install the dependencies with the following comma
 
 ```sh
 git https://github.com/EduVieira131/NLW-IA.git
-cd FoodExplorer-API
+cd NLW-IA
 npm install
 npm run dev
 ```
